@@ -1,0 +1,156 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	list-style: none;
+	text-decoration: none;
+}
+
+body{
+	background: url("../img/BG.jpg") no-repeat;
+	width: 800px;
+	height: 800px;
+	position: relative;
+}
+
+.menu{
+	border-radius: 5px;
+	background-color: #b34e3b;
+	margin: 100px;
+	display: inline-block;
+	box-shadow: 0 0 73px rgba(0, 0, 0, 0.58);
+}
+
+.menu__item{
+	background-color: #e3634b;
+	margin-bottom: 1px;
+	position: relative;
+}
+
+.menu__sub{
+	border-top: 1px solid  #b34e3b;
+	display: none;
+}
+
+.menu__item > a{
+	color: #f7f1e3;
+	font-family: "ProximaNova";
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 57px;
+}
+
+li a{
+	display: block;
+	color: #fff;
+	width: 276px;
+	height: 47px;
+	text-transform: capitalize;
+	line-height: 47px;
+	box-sizing: border-box;
+}
+
+.menu__sub-item{
+	position: relative;
+}
+
+.menu__sub-item > a{
+	height: 37px;
+	background-color: #484141;
+	color: #ad9e9e;
+	font-family: "QuicksandBold";
+	font-size: 9px;
+	line-height: 37px;
+	padding-left: 29px;
+}
+
+.menu__item > a::before{
+	width: 19px;
+	height: 20px;
+	background: url(../img/Icons.png);
+	content: "";
+	display: block;
+	position: absolute;
+	left: 19px;
+	top: 13px;
+}
+
+.menu__item:nth-child(2) > a::before{
+	background-position: -20px;
+}
+.menu__item:nth-child(3) > a::before{
+	background-position: -40px;
+}
+.menu__item:nth-child(4) > a::before{
+	background-position: -60px;
+}
+
+.menu__sub-item > a:hover::before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 6px;
+	height: 37px;
+	background-color: #cf5941;
+	left: 0;
+}
+
+.menu__item > a:hover{
+	background: #f97258;
+}
+
+.menu__sub-item > a:hover{
+	background: #393434;
+}
+
+.menu a:hover,
+.menu__sub-item > a:hover::before{
+	transition-duration: 0.5s;
+}
+
+.menu__item:first-child
+{
+	border-radius: 5px 5px 0 0;
+}
+
+.menu__item:last-child{
+	border-radius: 0 0 5px 5px;
+	margin-bottom: 0;
+}
+
+.counter-msg{
+	width: 34px;
+	height: 18px;
+	border-radius: 9px;
+	background-color: #474141;
+	padding: 8px 13px;
+	font-size: 9px;
+	font-family: "QuicksandBold";
+	color: #ae9f9f;
+	position: relative;
+	right: -114px;
+}
+
+@font-face{
+	font-family: "QuicksandBold";
+	src:url(../fonts/Quicksand-Bold.otf);
+
+	font-family: "ProximaNova";
+	src: url(../fonts/ProximaNova-Bold.otf);
+}
+
+
+.show_sub-item > a::after{
+	content: "";
+	display: block;
+	border: 10px solid transparent;
+	border-top: 7.5px solid #e3634b;
+	margin-top: 0px;
+	z-index: 10;
+	position: absolute;
+	left: 19px;
+}
+
+.show_sub-item  > .menu__sub{
+	display: block;
+}
