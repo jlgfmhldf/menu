@@ -4,21 +4,20 @@
 	font-family: sans-serif;
 	list-style: none;
 	text-decoration: none;
+	outline: none;
 }
 
 body{
-	background: url("../img/BG.jpg") no-repeat;
-	width: 800px;
-	height: 800px;
-	position: relative;
+	background: url("../img/BG.jpg") repeat;
+	background-size: cover;
 }
 
 .menu{
 	border-radius: 5px;
 	background-color: #b34e3b;
-	margin: 100px;
-	display: inline-block;
 	box-shadow: 0 0 73px rgba(0, 0, 0, 0.58);
+	width: 276px;
+	margin: calc(25% - 95.5px) auto 0 auto;
 }
 
 .menu__item{
@@ -64,7 +63,7 @@ li a{
 	padding-left: 29px;
 }
 
-.menu__item > a::before{
+.menu__item > a:before{
 	width: 19px;
 	height: 20px;
 	background: url(../img/Icons.png);
@@ -75,17 +74,17 @@ li a{
 	top: 13px;
 }
 
-.menu__item:nth-child(2) > a::before{
-	background-position: -20px;
+.menu__item:nth-child(2) > a:before{
+	background-position: -20px 16px;
 }
-.menu__item:nth-child(3) > a::before{
+.menu__item:nth-child(3) > a:before{
 	background-position: -40px;
 }
-.menu__item:nth-child(4) > a::before{
+.menu__item:nth-child(4) > a:before{
 	background-position: -60px;
 }
 
-.menu__sub-item > a:hover::before{
+.menu__sub-item > a:hover:before{
 	content: "";
 	display: block;
 	position: absolute;
@@ -104,16 +103,18 @@ li a{
 }
 
 .menu a:hover,
-.menu__sub-item > a:hover::before{
-	transition-duration: 0.5s;
+.menu__sub-item > a:hover:before{
+	transition-duration: 1.5s;
 }
 
-.menu__item:first-child
+.menu__item:first-child/*,
+.menu__item:first-child:hover*/
 {
 	border-radius: 5px 5px 0 0;
 }
 
-.menu__item:last-child{
+.menu__item:last-child/*,
+.menu__item:last-child a:hover*/{
 	border-radius: 0 0 5px 5px;
 	margin-bottom: 0;
 }
@@ -140,7 +141,7 @@ li a{
 }
 
 
-.show_sub-item > a::after{
+.show_sub-item > a:after{
 	content: "";
 	display: block;
 	border: 10px solid transparent;
